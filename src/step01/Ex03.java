@@ -11,6 +11,8 @@ public class Ex03 {
 		b = scan.nextInt();
 
 		System.out.println(a-b);
+		
+		scan.close();
 	}
 
 }

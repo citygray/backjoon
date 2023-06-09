@@ -11,6 +11,8 @@ public class Ex04 {
 		b = scan.nextInt();
 		
 		System.out.println(a*b);
+		
+		scan.close();
 
 	}
 

@@ -10,6 +10,7 @@ public class Ex05 {
 		a = scan.nextInt();
 		b = scan.nextInt();
 		System.out.println(a/(double)b);
+		scan.close();
 	}
-
+	
 }
