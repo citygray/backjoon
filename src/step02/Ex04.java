@@ -6,25 +6,11 @@ import java.io.InputStreamReader;
 
 public class Ex04  {
 
-	public static void main(String[] args){
+	public static void main(String[] args) throws IOException{
 	
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		int[] xy = new int[2];
-        
-
-        try {
-            for(int i =0; i<xy.length;i++) {
-            	xy[i] = Integer.parseInt(br.readLine());
-            }
-          
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-
-        int x,y;
-		
-		x =  xy[0];
-		y =  xy[1];
+		int x = Integer.parseInt(br.readLine());
+		int y = Integer.parseInt(br.readLine());
 		
 		int quadrant = 0;
 		if(x>0) {
