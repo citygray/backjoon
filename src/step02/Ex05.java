@@ -15,17 +15,13 @@ public class Ex05 {
 		int H = Integer.parseInt(st.nextToken());
 		int M = Integer.parseInt(st.nextToken());
 		
-		int beforeTime = (H*3600)+(M*60);
-		int afterTime = beforeTime - (45*60);
-		
-		int resultH = afterTime/3600;
-		int resultM = (int)((afterTime%3600)/60);
-		
-		if(resultM<0) {
-			resultH = 23;
-			resultM = 60+(resultM);
+		if(M<45) {
+			H= (H==0)?23:--H;
+			M = 60-(45-M);
+		}else {
+			M = 45-M;
 		}
-		System.out.println(resultH+" "+resultM);
+		System.out.println(H+" "+M);
 	}
 
 }
