@@ -19,7 +19,7 @@ public class Ex05 {
 			H= (H==0)?23:--H;
 			M = 60-(45-M);
 		}else {
-			M = 45-M;
+			M = M-45;
 		}
 		System.out.println(H+" "+M);
 	}
