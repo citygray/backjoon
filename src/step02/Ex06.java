@@ -30,18 +30,18 @@ public class Ex06 {
 		int C = Integer.parseInt(st2.nextToken());
 		
 				
-		if(B+C>60) {
+		if(B+C>=60) {
 			A = A+((B+C)/60);
 			B = (B+C)%60;
 		}else {
 			B = B+C;
 		}
-		if(A==23&&B==60) {
-			A = 0;
-			B = 0;
-		}
-		if(A ==24)A=0;
 		
+		if(A>=24) {
+			A = (A%24);
+		}
+
+	
 	
 		System.out.println(A+" "+B);
 		
