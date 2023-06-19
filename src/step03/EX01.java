@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class EX_01 {
+public class EX01 {
 
 	public static void main(String[] args) throws IOException{
 		//N을 입력받은 뒤, 구구단을 N단을 출력하는 프로그램을 작성
