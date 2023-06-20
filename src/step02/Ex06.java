@@ -26,8 +26,8 @@ public class Ex06 {
 		int A = Integer.parseInt(st.nextToken());
 		int B = Integer.parseInt(st.nextToken());
 		
-		StringTokenizer st2 = new StringTokenizer(br.readLine());
-		int C = Integer.parseInt(st2.nextToken());
+		//StringTokenizer st2 = new StringTokenizer(br.readLine());
+		int C = Integer.parseInt(br.readLine());
 		
 				
 		if(B+C>=60) {
