@@ -1,15 +1,11 @@
 package step03;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
-import java.util.StringTokenizer;
+import java.io.*;
+import java.util.*;
 
 public class Ex06 {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException{
 		/* 
 		* - 두 정수 A와 B를 입력받은 다음, A+B를 출력하는 프로그램을 작성한다.
 		* - 입력 
@@ -20,28 +16,25 @@ public class Ex06 {
 		* - 출력
 		* 각 테스트 케이스 마다  A+B를 출력한다.
 		*/
-		try {
-			BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		
+		//입력: BufferedReader 사용
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		int T = Integer.parseInt(br.readLine());
+		//readLine을 할때 마다 try&catch를 활용하여 예외처리 해주어도 되지만, 대개  throws IoException
+			
+			StringTokenizer st;
+			
 			BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 			
-			StringTokenizer st1 = new StringTokenizer(br.readLine());
-			
-			int T = Integer.parseInt(st1.nextToken());
-			
-			String str ="";
 			for(int i=0;i<T;i++){
-				st1 = new StringTokenizer(br.readLine());
-				int a = Integer.parseInt(st1.nextToken());
-				int b = Integer.parseInt(st1.nextToken());
-				str += a+b+"\n";
-			}
-			bw.write(str);
-			
-			br.close();
-			bw.flush();
-		}catch(IOException e) {
-			e.printStackTrace();
-		}
+				st = new StringTokenizer(br.readLine()); //StringTokenizer인자값에 입력문자열 넣음
+				int a = Integer.parseInt(st.nextToken()); //첫번재 호출
+				int b = Integer.parseInt(st.nextToken()); //두번째 호출
+				
+				bw.write(a+b+"\n"); 
+			}					
+			bw.flush(); //남아있는 데이터를 모두 출력
+	
 	}
 
 }
