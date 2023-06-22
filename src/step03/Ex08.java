@@ -7,9 +7,11 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.StringTokenizer;
 
-public class Ex07 {
+public class Ex08 {
 
 	public static void main(String[] args) throws IOException{
+		
+		//A+B - 8
 		/*
 		 * - 문제
 		 * 두 정수 A와 B를 입력받은 다음 A+B를 출력
@@ -31,7 +33,7 @@ public class Ex07 {
 			StringTokenizer st = new StringTokenizer(br.readLine());
 			int A = Integer.parseInt(st.nextToken());
 			int B = Integer.parseInt(st.nextToken());
-			bw.write("Case #"+ i +": "+ A +" + "+ B +"="+ (A+B)+"\n");
+			bw.write("Case #"+ i +": "+ A +" + "+ B +" = "+ (A+B)+"\n");
 		}
 				
 		bw.flush();
