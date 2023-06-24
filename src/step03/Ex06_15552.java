@@ -3,7 +3,7 @@ package step03;
 import java.io.*;
 import java.util.*;
 
-public class Ex06 {
+public class Ex06_15552 {
 
 	public static void main(String[] args) throws IOException{
 		/* 
