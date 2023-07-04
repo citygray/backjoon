@@ -12,20 +12,24 @@ public class Ex08_3052 {
 		int count = 0;
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		int[] arr = new int[10];
+		Arrays.fill(arr,-1);
 		for(int i =0; i<10;i++) {
-			arr[i]= Integer.parseInt(br.readLine())%42;
+			int k = Integer.parseInt(br.readLine())%42;
+			if(contains(arr,k)) {count++;}
+			arr[i] = k;
 		}
-		System.out.println(Arrays.toString(arr));
+		//System.out.println(Arrays.toString(arr));
+		System.out.println(10-count);
 		
-		Arrays.parallelSort(arr);
+	}
+	public static boolean contains(final int[] arr, final int key) {
 		
-		for(int i = 0; i<10;i++) {
-			if(Arrays.binarySearch(arr,arr[i] )>0) {
-				count++;
-			}
-		}
-		System.out.println(count);
-		
+	        boolean status = false;
+	        for (int i = 0; i < arr.length; i++) {
+	            status = arr[i]== key;
+	            if (status) break;
+	        }
+	        return status;
 	}
 
 }
